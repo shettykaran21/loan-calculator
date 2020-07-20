@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="shortcut icon" href="/favicon.ico?v=2.0" type="image/x-icon" />
+    <link rel="icon" href="/favicon.ico?v=2.0" type="image/x-icon" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+      integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg=="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <div class="container navbar-container">
+          <img src="/img/logo.svg" alt="logo" class="logo" />
+          <h1>Home Loan Calcuator</h1>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <div class="container main-container">
+        <div class="inputs">
+          <div class="input-1 input">
+            <div class="div-1">
+              <label for="loan-amount">LOAN AMOUNT</label>
+              <input
+                type="number"
+                name="loan-amount"
+                id="loan-amount"
+                value="2500000"
+                min="100000"
+                max="100000000"
+              />
+            </div>
+            <div>
+              <input
+                type="range"
+                name="loan-amount-slider"
+                id="loan-amount-slider"
+                value="25000000"
+                min="100000"
+                max="100000000"
+              />
+            </div>
+          </div>
+
+          <div class="input-2 input">
+            <div>
+              <label for="">TENURE (YEARS)</label>
+              <input
+                type="number"
+                name="tenure"
+                id="tenure"
+                value="20"
+                step="1"
+                min="1"
+                max="30"
+              />
+            </div>
+            <div>
+              <input
+                type="range"
+                name="tenure"
+                id="tenure-slider"
+                value="20"
+                step="1"
+                min="1"
+                max="30"
+              />
+            </div>
+          </div>
+
+          <div class="input-3 input">
+            <div>
+              <label for="interest-rate">INTEREST RATE (% P.A.)</label>
+              <input
+                type="number"
+                name="interest-rate"
+                id="interest-rate"
+                value="6.95"
+                step="0.01"
+                min="0"
+                max="15"
+              />
+            </div>
+            <div>
+              <input
+                type="range"
+                name="interest-rate"
+                id="interest-rate-slider"
+                value="6.95"
+                step="0.01"
+                min="0"
+                max="15"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="outputs">
+          <div>
+            <div class="output-1 output">
+              <p>Monthly Home Loan EMI</p>
+              <input
+                type="text"
+                name="monthly-emi"
+                id="monthly-emi"
+                class="monthly-emi"
+                readonly
+              />
+            </div>
+            <div class="output-2 output">
+              <p>Principal Amount</p>
+              <input
+                type="text"
+                name="principal-amount"
+                id="principal-amount"
+                readonly
+              />
+            </div>
+            <div class="output-3 output">
+              <p>Interest Amount</p>
+              <input
+                type="text"
+                name="interest-amount"
+                id="interest-amount"
+                readonly
+              />
+            </div>
+            <div class="output-4 output">
+              <p>Total Amount Payable</p>
+              <input
+                type="text"
+                name="total-amount"
+                id="total-amount"
+                readonly
+              />
+            </div>
+          </div>
+
+          <div class="chart">
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>
