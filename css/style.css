@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700;900&display=swap');
 
+:root {
+  --primary-blue: #003459;
+  --secondary-blue: #007ea7;
+  --tertiary-blue: #00a8e8;
+  --primary-dark: #00171f;
+}
 *,
 *::before,
 *::after {
@@ -31,7 +37,7 @@ input[type='range'] {
 input[type='number'] {
   outline: none;
   border: none;
-  border-bottom: 1px solid #00171f;
+  border-bottom: 1px solid var(--primary-dark);
   background: transparent;
   text-align: right;
   font-family: 'Fira Sans', sans-serif;
@@ -40,13 +46,40 @@ input[type='number'] {
 input[type='number']:focus-within {
   outline: none;
   border: none;
-  border-bottom: 1px solid #00171f;
+  border-bottom: 1px solid var(--primary-dark);
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+}
+
+input[type='range']:focus {
+  outline: none;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  background: var(--tertiary-blue);
+  height: 5px;
+}
+
+input[type='range']::-moz-range-track {
+  background: var(--tertiary-blue);
+  height: 5px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  background: var(--secondary-blue);
+  margin-top: -5px;
+  border-radius: 50%;
 }
 
 canvas {
@@ -70,7 +103,7 @@ canvas {
 /* ----Navbar---- */
 #navbar {
   height: 80px;
-  background-color: #00171f;
+  background-color: var(--primary-dark);
   color: #fff;
 }
 
@@ -138,7 +171,7 @@ canvas {
   width: 100%;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #003459;
+  color: var(--primary-blue);
   background: transparent;
   font-family: 'Fira Sans', sans-serif;
 }
@@ -146,7 +179,7 @@ canvas {
 .main-container .outputs .output .monthly-emi {
   font-size: 3rem;
   font-weight: bold;
-  color: #007ea7;
+  color: var(--secondary-blue);
 }
 
 .main-container .outputs .output p {
