@@ -105,6 +105,7 @@ canvas {
   height: 80px;
   background-color: var(--primary-dark);
   color: #fff;
+  position: relative;
 }
 
 #navbar .navbar-container {
@@ -113,7 +114,6 @@ canvas {
   justify-content: center;
   align-items: center;
 }
-
 /* ------------Main------------ */
 #main {
   height: calc(100vh - 80px);
@@ -191,6 +191,33 @@ canvas {
   position: absolute;
   top: 250%;
   left: -0.8rem;
+}
+
+/* ----Footer---- */
+.footer {
+  height: 10rem;
+  color: #1e1e1e;
+  /* background-color: #98a6ad; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-top: 1px solid #1e1e1e;
+}
+.footer__social {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer__link {
+  color: #1e1e1e;
+}
+.footer__icon {
+  cursor: pointer;
+}
+.footer__icon--heart {
+  color: #f83a60;
+  margin: 0 0.5rem;
 }
 
 /* ----Media Queries---- */
