@@ -202,7 +202,7 @@ canvas {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  border-top: 1px solid #1e1e1e;
+  border-top: 1px solid #dbdbdb;
 }
 .footer__social {
   display: flex;
